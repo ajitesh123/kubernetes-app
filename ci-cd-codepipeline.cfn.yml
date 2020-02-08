@@ -6,23 +6,23 @@ Description: EKSWSV1
 
 Parameters:
 
-  EksClusterName: eksctl-simple-jwt-api-cluster
+  EksClusterName:
     Type: String
     Description: The name of the EKS cluster created
-    Default:
+    Default: eksctl-simple-jwt-api-cluster
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
 
-  GitSourceRepo: kubernetes-app
+  GitSourceRepo:
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default:
+    Default: kubernetes-app
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
 
-  GitBranch: master
+  GitBranch:
     Type: String
     Default: master
     Description: GitHub git repository branch - change triggers a new build
@@ -30,7 +30,7 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository branch name
 
-  GitHubToken: ebb2327362135a2388e7683ed3b63a97b33d27b8
+  GitHubToken:
     Type: String
     NoEcho: true
     Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
@@ -38,9 +38,9 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub personal access token
 
-  GitHubUser: ajitesh123
+  GitHubUser:
     Type: String
-    Default:
+    Default: ajitesh123
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
@@ -54,9 +54,9 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a CodeBuild Docker image
 
-  KubectlRoleName: UdacityFlaskDeployCBKubectlRole
+  KubectlRoleName:
     Type: String
-    Default:
+    Default: UdacityFlaskDeployCBKubectlRole
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
